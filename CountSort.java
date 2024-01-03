@@ -1,40 +1,35 @@
-import java.util.Arrays;
+public class CountSort{
+    public static void main(String[] args) {
+       int arr[]={4,3,12,1,5,5,3,9};
+       int ans[]=countSort(arr);
+       for(int i=0;i<ans.length;i++){
+        System.out.print(ans[i]+" ");
+       } 
+    }
 
-public class CountSort {
-    public static int[] countSort(int[] inputArray) {
-        int N = inputArray.length;
-        int M = 0;
-
-        for (int i = 0; i < N; i++) {
-            M = Math.max(M, inputArray[i]);
+    public static int[] countSort(int arr[]){
+        int n=arr.length;
+        int m=0;
+        for(int i=0;i<n;i++){
+            m=Math.max(m,arr[i]);
         }
 
-        int[] countArray = new int[M + 1];
-
-        for (int i = 0; i < N; i++) {
-            countArray[inputArray[i]]++;
+        int []countArray= new int[m+1];
+        for(int i=0;i<n;i++){
+            countArray[arr[i]]++;
         }
 
-        for (int i = 1; i <= M; i++) {
-            countArray[i] += countArray[i - 1];
+        for(int i=1;i<=m;i++){
+            countArray[i]+=countArray[i-1];
         }
 
-        int[] outputArray = new int[N];
-
-        for (int i = N - 1; i >= 0; i--) {
-            outputArray[countArray[inputArray[i]] - 1] = inputArray[i];
-            countArray[inputArray[i]]--;
+        int []outputArray =new int[n];
+        for(int i=n-1;i>=0;i--){
+            outputArray[countArray[arr[i]]-1]=arr[i];
+            countArray[arr[i]]--;
         }
 
         return outputArray;
-    }
 
-    public static void main(String[] args) {
-        int[] inputArray = { 4, 3, 12, 1, 5, 5, 3, 9 };
-        int[] outputArray = countSort(inputArray);
-
-        for (int i = 0; i < inputArray.length; i++) {
-            System.out.print(outputArray[i] + " ");
-        }
     }
 }
