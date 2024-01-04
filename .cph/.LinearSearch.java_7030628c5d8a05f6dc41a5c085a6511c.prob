@@ -1,1 +1,0 @@
-{"name":"Local: LinearSearch","url":"c:\\Users\\Admin\\Desktop\\Java\\LinearSearch.java","tests":[{"id":1702902823552,"input":"4\n6 2 3 4\n8","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\Java\\LinearSearch.java","group":"local","local":true}
