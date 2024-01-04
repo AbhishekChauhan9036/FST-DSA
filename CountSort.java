@@ -1,10 +1,10 @@
 public class CountSort{
-    public static void main(String[] args) {
-       int arr[]={4,3,12,1,5,5,3,9};
-       int ans[]=countSort(arr);
-       for(int i=0;i<ans.length;i++){
-        System.out.print(ans[i]+" ");
-       } 
+    public static void main(String... args){
+        int arr[]={4,3,12,1,5,5,3,9};
+        int ans[]=countSort(arr);
+        for(int i=0;i<ans.length;i++){
+            System.out.print(ans[i]+" ");
+        }
     }
 
     public static int[] countSort(int arr[]){
@@ -14,7 +14,7 @@ public class CountSort{
             m=Math.max(m,arr[i]);
         }
 
-        int []countArray= new int[m+1];
+        int []countArray = new int[m+1];
         for(int i=0;i<n;i++){
             countArray[arr[i]]++;
         }
@@ -23,13 +23,11 @@ public class CountSort{
             countArray[i]+=countArray[i-1];
         }
 
-        int []outputArray =new int[n];
+        int []outputArray = new int[n];
         for(int i=n-1;i>=0;i--){
             outputArray[countArray[arr[i]]-1]=arr[i];
             countArray[arr[i]]--;
         }
-
         return outputArray;
-
     }
 }
