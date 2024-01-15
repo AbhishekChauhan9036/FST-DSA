@@ -1,44 +1,35 @@
 import java.util.*;
 
 public class hashMap {
-    public static void main(String args[]) {
-        // Creation
+    public static void main(String... args) {
         HashMap<String, Integer> map = new HashMap<>();
 
-        // Insertion
+        // Insertion in map
         map.put("Rahul", 1);
-        map.put("Manish", 2);
-        map.put("Sonali", 3);
+        map.put("Manish", 7);
+        map.put("Manish", 17);
+        map.put("Sohan", 90);
+        map.put("Vikash", 27);
+        map.put("Anish", 11);
+        map.put("Shreya", 31);
 
-        System.out.println(map);
-
-        map.put("Sonali", 4);
-        System.out.println(map);
-
-        // Searching
-        if (map.containsKey("Rahul")) {
-            System.out.println("key is present in the map");
+        // Seraching in Map
+        if (map.containsKey("Rakesh")) {
+            System.out.println("Rakesh is Present in our Map");
         } else {
-            System.out.println("key is not present in the map");
+            System.out.println("It's not present");
         }
 
-        System.out.println(map.get("Sonali")); // key exists
-        System.out.println(map.get("Suresh")); // key doesn't exist
-
-        // Iteration (1)
+        // Traversal of Map
         for (Map.Entry<String, Integer> e : map.entrySet()) {
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
+            System.out.println(e.getValue() + " " + e.getKey());
         }
 
-        // Iteration (2)
-        Set<String> keys = map.keySet();
-        for (String key : keys) {
-            System.out.println(key + " " + map.get(key));
-        }
+        // Acces Value with the help of key
+        System.out.println(map.get("Vikash"));
 
-        // Removing
-        map.remove("Rahul");
+        // Deletaion in Map
+        map.remove("Vikash");
         System.out.println(map);
 
     }
