@@ -28,8 +28,9 @@ class Queue {
     }
 
     int dequeue() {
-        if (isEmpty(this))
+        if (isEmpty(this)) {
             return Integer.MIN_VALUE;
+        }
 
         int item = this.array[this.front];
         this.front = (this.front + 1) % this.capacity;
@@ -38,31 +39,20 @@ class Queue {
     }
 
     int front() {
-        if (isEmpty(this))
+        if (isEmpty(this)) {
             return Integer.MIN_VALUE;
-
+        }
         return this.array[this.front];
-    }
-
-    int rear() {
-        if (isEmpty(this))
-            return Integer.MIN_VALUE;
-
-        return this.array[this.rear];
     }
 }
 
 public class Main {
-    public static void main(String[] args) {
-        Queue queue = new Queue(1000);
-
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        queue.enqueue(40);
-
-        System.out.println(queue.dequeue() + " dequeued from queue\n");
-        System.out.println("Front item is " + queue.front());
-        System.out.println("Rear item is " + queue.rear());
+    public static void main(String... args) {
+        Queue queue = new Queue(2);
+        queue.enqueue(100);
+        queue.enqueue(200);
+        // System.out.println((queue.dequeue()));
+        System.out.println(queue.isEmpty(queue));
+        System.out.println(queue.isFull(queue));
     }
 }
