@@ -58,12 +58,11 @@ void bhagwatGeeta(){
     // cin>>tt;
     while(tt--){
         // your code here
-        int a,b,c;
+        ll a,b,c;
         cin>>a>>b>>c;
         string s;
         cin>>s;
         cout<<(a+b+c)<<" "<<s<<cline;
-
     }
 }
 

@@ -1,1 +1,4 @@
-6 test
+YES
+NO
+YES
+NO
