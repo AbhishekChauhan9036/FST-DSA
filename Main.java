@@ -1,17 +1,14 @@
 public class Main {
-
-    public static int rangeBitwiseAnd(int left, int right) {
-        int ans=0;
-        while(left!=right){
-            left=left/2;
-            right=right/2;
-            ans++;
-        }
-        return left<<ans;
-    }
     public static void main(String[] args) {
-        int a=9;
-        int b=15;
-        System.out.println(rangeBitwiseAnd(a, b));
+        String octStr = "63";
+        int num = Integer.parseInt(octStr, 8);
+        int result = 0;
+        int i = 0;
+        while (num != 0) {
+            result ^= num;
+            num >>= 1;
+            i++;
+        }
+        System.out.println(Integer.toOctalString(result));
     }
 }

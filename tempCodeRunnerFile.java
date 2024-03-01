@@ -1,9 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        if (1 + 1 + 1 + 1 + 1 == 5) {
-            System.out.print("TRUE");
-        } else {
-            System.out.print("FALSE");
-        }
+        int[] arr = {0x5, 0x6, 0x7};
+        int result = arr[0] >> 1;
+        System.out.println(result);
     }
 }
