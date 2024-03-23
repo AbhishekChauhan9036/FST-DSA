@@ -54,16 +54,15 @@ ll phin(ll n) {ll number = n; if (n % 2 == 0) {number /= 2; while (n % 2 == 0) n
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
 void bhagwatGeeta(){
-    int tt=1;
-    // cin>>tt;
-    while(tt--){
-        // your code here
-        ll a,b,c;
-        cin>>a>>b>>c;
+     int t=1;
+     // cin>>t;
+     while(t--){
+        int a,b,c;
         string s;
+        cin>>a>>b>>c;
         cin>>s;
-        cout<<(a+b+c)<<" "<<s<<cline;
-    }
+        cout<<a+b+c<<" "<<s<<cline;
+     }
 }
 
 signed main(){
